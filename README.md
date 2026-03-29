@@ -88,6 +88,10 @@ project-root/
 │   ├── clean_bank_data.csv
 │   ├── clean_ledger_data.csv
 │   └── legend.csv
+├── screenshots/
+│   ├── Reconciliation_Summary.png
+│   ├── Exceptions_Report.png
+│   └── Reconciled_Matches.png
 ├── src/
 │   ├── main.py
 │   ├── ingestion.py
@@ -120,6 +124,20 @@ Once a pair is matched at any rule, both records leave the pool. Lower-priority 
 Unresolved items are classified into seven active exception categories: EXC-01 (bank item not in ledger), EXC-02 (ledger item not in bank), EXC-03 (amount mismatch), EXC-04 (missing reference), EXC-06 (duplicate risk), EXC-07 (unknown bank outflow), and EXC-08 (unposted bank receipt). Date-gap matches are carried with a `DATE_GAP` info flag on matched rows rather than emitted as a standalone exception.
 
 Full logic specification is in `docs/Finance_Reconciliation_V1_Final_Logic.docx`.
+
+## Output Preview
+
+**Reconciliation Summary** — adjusted balances and closing proof:
+
+![Reconciliation Summary](screenshots/Reconciliation_Summary.png)
+
+**Exceptions Report** — exception categories and cash direction:
+
+![Exceptions Report](screenshots/Exceptions_Report.png)
+
+**Reconciled Matches** — matched pairs with review flags:
+
+![Reconciled Matches](screenshots/Reconciled_Matches.png)
 
 ## Skills Demonstrated
 
