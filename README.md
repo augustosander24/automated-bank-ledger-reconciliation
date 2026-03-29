@@ -1,31 +1,49 @@
-# Finance Reconciliation — Automated Bank-to-Ledger Workflow
+# Automated Bank-to-Ledger Reconciliation
 
-A portfolio-quality finance operations project that automates a month-end bank-to-ledger reconciliation workflow using Python. Built to reflect how a finance or accounting analyst would approach a controlled reconciliation process — starting from raw source data and producing review-ready outputs.
+A portfolio-quality finance operations project that automates a month-end bank-to-ledger reconciliation workflow using Python.
+
+This project is built to reflect how a finance or accounting analyst would approach a controlled reconciliation process: start from raw source data, standardize the inputs, apply defined matching logic, isolate exceptions, and produce review-ready outputs.
 
 ## What This Project Does
 
-The script ingests three raw CSV files — bank transactions, ledger transactions, and payment obligations — and runs them through a structured reconciliation pipeline that:
+The workflow ingests three raw CSV files — bank transactions, ledger transactions, and payment obligations — and runs them through a structured reconciliation pipeline that:
 
-- cleans and standardizes all source data before any matching begins
-- matches bank and ledger transactions using a six-step priority sequence (Rules 1, 1B, 2, 3, 4, and 4B)
+- cleans and standardizes source data before matching begins
+- reconciles bank and ledger transactions using a six-step priority rule sequence (Rules 1, 1B, 2, 3, 4, and 4B)
 - separates confirmed matches from items requiring review
 - classifies unresolved items into seven active exception categories
 - produces an adjusted bank balance, adjusted ledger balance, and net variance proof
 - outputs a formatted Excel workbook with six review-ready tabs
 
-## Outputs
+## Version 1 Scope
 
-Running the script produces the following in `output/`:
+This repository is intentionally limited to a controlled Version 1 scope:
 
-| File | Contents |
-|---|---|
-| `reconciliation_output.xlsx` | Full Excel workbook — summary, matches, exceptions, legend, clean source data |
-| `reconciled_matches.csv` | All matched bank-ledger pairs with match result label and review flags |
-| `exceptions_report.csv` | Review report covering unmatched items, duplicate risks, timing items, and matched exceptions requiring follow-up |
-| `reconciliation_summary.csv` | Adjusted balances, net variance, and transaction counts |
-| `clean_bank_data.csv` | Standardized bank transactions — final cleaned version written to output for review |
-| `clean_ledger_data.csv` | Standardized ledger transactions — final cleaned version written to output for review |
-| `legend.csv` | Reference table for selected match labels and key exception categories used in the workbook |
+- one month
+- one entity
+- one currency
+- no prior-period carry-forward
+- no opening balance bridge
+
+The primary reconciliation is **Bank transactions vs Ledger transactions**. The payment obligations file is included as a supporting reference layer for cash-flow context, but it is **not** the core matching engine in Version 1.
+
+## Workflow
+
+The project follows this finance-oriented workflow:
+
+**raw CSV → clean / standardize → reconcile → classify exceptions / variance → review / next steps**
+
+This keeps the process aligned with realistic finance operations work and preserves the raw CSV files as the official source foundation.
+
+## Official Source Inputs
+
+The project begins from these raw input files:
+
+- `data_raw/bank_transactions_sample.csv`
+- `data_raw/ledger_transactions_sample.csv`
+- `data_raw/payment_obligations_sample.csv`
+
+These raw files are the official starting point. Any cleaned, prepared, or intermediate files are workflow outputs, not source foundations.
 
 ## How to Run
 
@@ -35,8 +53,22 @@ pip install pandas openpyxl
 python src/main.py
 ```
 
+## Outputs
+
+Running the script produces the following in `output/`:
+
+| File | Contents |
+|---|---|
+| `reconciliation_output.xlsx` | Full Excel workbook with summary, matches, exceptions, legend, and cleaned source tabs |
+| `reconciled_matches.csv` | Matched bank-ledger pairs with match result labels and review flags |
+| `exceptions_report.csv` | Review report covering unmatched items, duplicate risks, timing items, and matched exceptions requiring follow-up |
+| `reconciliation_summary.csv` | Adjusted balances, net variance, and transaction counts |
+| `clean_bank_data.csv` | Final review-ready cleaned bank transactions |
+| `clean_ledger_data.csv` | Final review-ready cleaned ledger transactions |
+| `legend.csv` | Reference table for selected match labels and key exception categories used in the workbook |
+
 ## Project Structure
-```
+```text
 project-root/
 ├── README.md
 ├── AGENTS.md
@@ -63,12 +95,12 @@ project-root/
 │   ├── reconciliation.py
 │   └── config.py
 └── docs/
-    ├── Finance_Reconciliation_V1_Final_Logic_Updated_revised.docx
-    ├── Finance_Reconciliation_V1_Aligned_Raw_Data_Reference_revised.docx
-    └── Finance_Reconciliation_V1_Raw_Source_Redesign_Spec_revised.docx
+    ├── Finance_Reconciliation_V1_Final_Logic.docx
+    ├── Finance_Reconciliation_V1_Aligned_Raw_Data.docx
+    └── Finance_Reconciliation_V1_Raw_Source.docx
 ```
 
-**Note on cleaned file locations:** `data_clean/` holds the intermediate cleaned CSVs produced during the standardization stage — these are pipeline working files. `output/clean_bank_data.csv` and `output/clean_ledger_data.csv` are the final review-ready versions written alongside the other reconciliation outputs. They serve different purposes in the workflow.
+**Note on cleaned file locations:** `data_clean/` holds intermediate cleaned CSVs produced during the standardization stage — these are pipeline working files. `output/clean_bank_data.csv` and `output/clean_ledger_data.csv` are the final review-ready versions written alongside the other reconciliation outputs. They serve different purposes in the workflow.
 
 ## Reconciliation Logic
 
@@ -87,20 +119,7 @@ Once a pair is matched at any rule, both records leave the pool. Lower-priority 
 
 Unresolved items are classified into seven active exception categories: EXC-01 (bank item not in ledger), EXC-02 (ledger item not in bank), EXC-03 (amount mismatch), EXC-04 (missing reference), EXC-06 (duplicate risk), EXC-07 (unknown bank outflow), and EXC-08 (unposted bank receipt). Date-gap matches are carried with a `DATE_GAP` info flag on matched rows rather than emitted as a standalone exception.
 
-Full logic specification is in `docs/Finance_Reconciliation_V1_Final_Logic_Updated_revised.docx`.
-
-## Version 1 Scope
-
-This project is intentionally narrow by design:
-
-- one reporting month
-- one entity
-- one currency
-- no prior-period carry-forward
-- no opening balance bridge
-- payment obligations are a supporting reference layer, not the core match engine
-
-Keeping Version 1 controlled is a design choice. The goal is a credible, reviewable reconciliation process — not an over-engineered engine.
+Full logic specification is in `docs/Finance_Reconciliation_V1_Final_Logic.docx`.
 
 ## Skills Demonstrated
 
