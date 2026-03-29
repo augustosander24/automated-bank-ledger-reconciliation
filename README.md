@@ -1,4 +1,4 @@
-# Finance Reconciliation and Cash Flow Analysis
+# Finance Reconciliation — Automated Bank-to-Ledger Workflow
 
 A portfolio-quality finance operations project that automates a month-end bank-to-ledger reconciliation workflow using Python. Built to reflect how a finance or accounting analyst would approach a controlled reconciliation process — starting from raw source data and producing review-ready outputs.
 
@@ -30,14 +30,12 @@ Running the script produces the following in `output/`:
 ## How to Run
 
 Python 3.x required.
-
 ```bash
 pip install pandas openpyxl
 python src/main.py
 ```
 
 ## Project Structure
-
 ```
 project-root/
 ├── README.md
