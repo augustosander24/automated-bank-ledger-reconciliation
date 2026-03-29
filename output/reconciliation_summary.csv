@@ -1,0 +1,20 @@
+metric,value,note
+Period,January 2024,
+Bank ending balance,198135.0,Ending book value from the January 2024 bank data in scope.
+Adjusted bank balance,198360.0,Bank ending balance adjusted for ledger-side reconciling items not yet on the bank statement.
+Ledger ending balance,198445.0,Ending cash-book value from the January 2024 ledger data in scope.
+Adjusted ledger balance,198360.0,Ledger ending balance adjusted for bank-side reconciling items not yet recorded in the ledger.
+Net unresolved cash variance,0.0,Remaining difference between adjusted bank and adjusted ledger balances.
+Unresolved variance direction,BALANCED,Shows BALANCED when the reconciliation closes.
+Total bank transactions in scope,23,
+Total ledger transactions in scope,23,
+Exact matches,20,
+Reviewed same-day matches,1,Same-day cash-effect matches reviewed where source-side references or naming differ.
+Date-tolerance matches,0,
+Likely no-reference matches,0,
+Amount mismatches,0,
+Duplicate risks,0,
+Unmatched bank items,2,
+Unmatched ledger items,2,
+Total unresolved exceptions,4,
+Open-item analytical rollup,140.0,Supporting signed rollup of listed open items; not the primary closing variance.

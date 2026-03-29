@@ -1,0 +1,6 @@
+Legend Item,Type,Description
+Exact match,Match,Bank and ledger items reconciled directly without reviewer escalation.
+Reviewed same-day match,Match,Same-day cash-effect match reviewed because source-side references or naming differ.
+EXC-02,Exception,Ledger-side reconciling item not yet reflected on the bank statement.
+EXC-07,Exception,Bank-side outflow requiring review or recording support.
+EXC-08,Exception,Bank-side inflow requiring review or recording support.

@@ -1,0 +1,24 @@
+ledger_period_start,ledger_period_end,ledger_opening_balance,entity_name,posting_date,journal_reference,line_number,gl_account_number,gl_account_name,description,source_document,source_reference,debit_amount,credit_amount,balance_after_posting,currency
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/3/2024,JRN-240103-001,1,101000,Operating Cash - First Regional Bank,Customer receipt - North Valley Hospital,AR Receipt,RCPT-240103-NVH,18750,0,168750,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/4/2024,JRN-240104-001,1,101000,Operating Cash - First Regional Bank,AP payment - LabEquip Inc,AP Payment,PMT-240104-LEQ,0,7640,161110,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/5/2024,JRN-240105-001,1,101000,Operating Cash - First Regional Bank,Customer receipt - Sunrise Clinic,AR Receipt,RCPT-240105-SRC,12480,0,173590,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/8/2024,JRN-240108-001,1,101000,Operating Cash - First Regional Bank,Payroll funding - Jan 8 cycle,Payroll,PR-240108,0,14250,159340,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/9/2024,JRN-240109-001,1,101000,Operating Cash - First Regional Bank,Customer receipt - Horizon Medical Group,AR Receipt,RCPT-240109-HMG,9320,0,168660,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/10/2024,JRN-240110-001,1,101000,Operating Cash - First Regional Bank,Rent payment - Cedar Properties,Rent,LEASE-240110,0,6800,161860,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/11/2024,JRN-240111-001,1,101000,Operating Cash - First Regional Bank,AP payment - Sterile Pack LLC,AP Payment,PMT-240111-SPL,0,4325,157535,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/12/2024,JRN-240112-001,1,101000,Operating Cash - First Regional Bank,Customer receipt - Lakeside Surgical,AR Receipt,,8975,0,166510,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/15/2024,JRN-240115-001,1,101000,Operating Cash - First Regional Bank,AP payment - Utilities Hub,AP Payment,PMT-240115-UHB,0,2890,163620,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/16/2024,JRN-240116-001,1,101000,Operating Cash - First Regional Bank,AP payment - MedTrans Courier,AP Payment,PMT-240116-MTC,0,1860,161760,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/17/2024,JRN-240117-001,1,101000,Operating Cash - First Regional Bank,Customer receipt - Pinnacle Health,AR Receipt,RCPT-240117-PHL,11430,0,173190,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/18/2024,JRN-240118-001,1,101000,Operating Cash - First Regional Bank,Payroll tax remittance,Payroll Tax,,0,3780,169410,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/19/2024,JRN-240119-001,1,101000,Operating Cash - First Regional Bank,AP payment - BioWaste Solutions,AP Payment,PMT-240119-BWS,0,2145,167265,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/22/2024,JRN-240122-001,1,101000,Operating Cash - First Regional Bank,Customer receipt - Regional Care Partners,AR Receipt,RCPT-240122-RCP,13200,0,180465,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/24/2024,JRN-240124-001,1,101000,Operating Cash - First Regional Bank,Partial AP payment - CleanAir Diagnostics,AP Payment,PMT-240124-CAD,0,2200,178265,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/25/2024,JRN-240125-001,1,101000,Operating Cash - First Regional Bank,Customer receipt - Eastside Imaging,AR Receipt,RCPT-240125-EIM,7560,0,185825,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/26/2024,JRN-240126-001,1,101000,Operating Cash - First Regional Bank,AP payment - MedSupply Wholesale,AP Payment,PMT-240126-MSW,0,9635,176190,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/29/2024,JRN-240129-001,1,101000,Operating Cash - First Regional Bank,Insurance payment - Harbor Insurance,Insurance,PMT-240129-HIC,0,4210,171980,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/29/2024,JRN-240129-002,1,101000,Operating Cash - First Regional Bank,Customer receipt - Westbrook Clinic,AR Receipt,RCPT-240129-WBC,10450,0,182430,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/30/2024,JRN-240130-001,1,101000,Operating Cash - First Regional Bank,Equipment lease payment - Apex Equipment Finance,Lease Payment,PMT-240130-AEF,0,1980,180450,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/31/2024,JRN-240131-001,1,101000,Operating Cash - First Regional Bank,Outstanding check - Office Plus,AP Payment,CHK-1060,0,225,180225,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/31/2024,JRN-240131-002,1,101000,Operating Cash - First Regional Bank,Customer receipt in transit - Central Lab Copay,AR Receipt,RCPT-TRANSIT-0131,450,0,180675,USD
+1/1/2024,1/31/2024,150000,MedSupplyCo,1/31/2024,JRN-240131-003,1,101000,Operating Cash - First Regional Bank,Customer receipt - CityLab Network,AR Receipt,RCPT-240131-CLN,17770,0,198445,USD
